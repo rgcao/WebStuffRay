@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Js\Product.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -107,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
+    <Content Include="Templates\tplAllProducts.html" />
+    <Content Include="Templates\tplProductCell.html" />
+    <Content Include="Templates\tplNewContact.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
