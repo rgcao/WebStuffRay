@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="Js\backbone.js" />
     <Content Include="Js\jquery-3.2.1.js" />
+    <Content Include="Js\json2.js" />
     <Content Include="Js\Product.js" />
     <Content Include="Js\underscore.js" />
     <Content Include="packages.config" />

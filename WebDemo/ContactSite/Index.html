@@ -2,9 +2,129 @@
 <html>
 <head>
     <title>ContactSite</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    
 </head>
+
 <body>
-    <a>this is a Demo</a>
+    <div id="header" style="width:100%; height:9vh ;border:double; border-color:black" ><h5 >Product Management</h5></div>
+    <div id="content"> </div>
+    <div id="Bottom" style="width:100%; height:9vh ;bottom:0 ;position:absolute; left:0; right:0; "><a>Bottom</a></div>
+
+    <script src="Js/underscore.js"></script>
+    <script src="Js/jquery-3.2.1.js"></script>
+    <script src="Js/backbone.js"></script>
+    <script src="Js/json2.js" ></script>
+    
+
+    <script type="text/template" id="tplAllProductsHead" >
+        <table class="ProductTable" id="ProductTable">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>ProductName</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </script>
+    <script type="text/template" id="tplAllProductsRow">
+        <tr>
+            <td><%= id %> </td>
+            <td><%= Name %> </td>
+            <td><%= Category %> </td>
+            <td><%= Price %> </td>
+            <td> <a class="csEditProduct">Edit</a> <a class="csDeleteProduct">Delete</a> </td>
+        </tr>
+    </script>
+    <script type="text/template" id="tplAddNewProduct">
+        <table class="ProductEdit" id="ProductEdit">
+            <tr hidden="hidden">
+                <td> ID </td>
+                <td> <%= productID %></td>
+            </tr>
+            <tr>
+                <td width="150">Name</td>
+                <td><input id="EditName"  value="<%= Name %>" /></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td><input id="EditCategory" class="EditCategory" value="<%= Category %>" /></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input id="EditPrice" class="EditPrice" value="<%= Price %>" /></td> 
+            </tr>           
+        </table>
+
+        <input type="button" id="btSubmit" title="Save product" value="Submit" />
+    </script>
+    <script src="Js/Product.js"></script>
+    <!--<script>
+
+        $(document).ready(function(){
+            var appRouter = Backbone.Router.extend({
+                
+                routes: {
+                    "": "Start",
+                    "ViewAll": "ViewAllProds",
+                    "AddNew": "AddProd"
+                },
+                Start: function () {
+                    $("#content").empty();
+                    $("#content").append("<a>this is a test</a>");
+                },
+                ViewAllProds: function () { },
+                AddProd: function () { }
+            });
+
+            var MainFun = function main() {               
+                var app = new appRouter();
+                Backbone.history.start();
+                // Router, Initialize is start from this function
+            };
+            MainFun();
+        })
+    </script>-->
+    <!--<script language="text/javascript" src="Js/Product.js" ></script>-->
+    <!--<script  >
+        
+        $(document).ready(function () {
+            alert("123");
+            $("Dothing").click(function () { alert("123"); });
+        });
+        //$(document).ready(function(){
+        //    var appRouter = Backbone.Router.extend({
+        //        initialize: function () {
+        //            $("#content").empty();
+        //            $("#content").append("<a>this is a test</a>");
+        //        },
+        //        routes: {
+        //            "": "Start",
+        //            "ViewAll": "ViewAllProds",
+        //            "AddNew": "AddProd"
+        //        },
+        //        Start: function () {
+        //            $("#content").empty();
+        //            $("#content").append("<a>this is a test</a>");
+        //        },
+        //        ViewAllProds: function () { },
+        //        AddProd: function () { }
+        //    });
+
+        //    var MainFun = function main() {
+        //        alert("main function");
+        //        var app = new appRouter();
+        //        Backbone.history.start();
+        //        // Router, Initialize is start from this function
+        //    };
+        //    alert("main function");
+        //    MainFun();
+        //})
+    </script>-->
+    
 </body>
 </html>
