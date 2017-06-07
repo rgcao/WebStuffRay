@@ -14,11 +14,14 @@
     <script src="Js/underscore.js"></script>
     <script src="Js/jquery-3.2.1.js"></script>
     <script src="Js/backbone.js"></script>
+    <script src="Js/backbone.localStorage.js" ></script>
     <script src="Js/json2.js" ></script>
+    
     
 
     <script type="text/template" id="tplAllProductsHead" >
-        <table class="ProductTable" id="ProductTable">
+        
+        <table class="ProductTable1" cellpadding="5" border="1" style="border-style:solid; border-color:red"  id="ProductTable">
             <thead>
                 <tr>
                     <td>ID</td>
@@ -28,17 +31,17 @@
                     <td></td>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>               
+            </tbody>
         </table>
+        <div><input type="button" id="btCreateProd" style="border-style:solid; border-color:black" value="Create NEW Product"/></div>
     </script>
     <script type="text/template" id="tplAllProductsRow">
-        <tr>
-            <td><%= id %> </td>
+            <td><%= productID %> </td>
             <td><%= Name %> </td>
             <td><%= Category %> </td>
             <td><%= Price %> </td>
             <td> <a class="csEditProduct">Edit</a> <a class="csDeleteProduct">Delete</a> </td>
-        </tr>
     </script>
     <script type="text/template" id="tplAddNewProduct">
         <table class="ProductEdit" id="ProductEdit">
@@ -59,8 +62,11 @@
                 <td><input id="EditPrice" class="EditPrice" value="<%= Price %>" /></td> 
             </tr>           
         </table>
-
-        <input type="button" id="btSubmit" title="Save product" value="Submit" />
+        <div>
+            <input type="button" id="btSubmit" title="Save product" value="Submit" />
+            <input type="button" id="btDelete" title="Delete product" value="Delete" />
+        </div>
+        
     </script>
     <script src="Js/Product.js"></script>
     <!--<script>
